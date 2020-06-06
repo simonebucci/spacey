@@ -15,6 +15,6 @@ exports.conf = {
 exports.help = {
   name: "elon",
   category: "Miscelaneous",
-  description: "Who doesn't loves him?",
+  description: "Who doesn't love him?",
   usage: "elon"
 };
