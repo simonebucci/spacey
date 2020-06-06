@@ -10,6 +10,9 @@ const { promisify } = require("util");
 const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 
+const fetch = require('node-fetch');
+
+
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`,
 // or `bot.something`, this is what we're refering to. Your client.
@@ -60,7 +63,7 @@ const init = async () => {
     client.logger.log(`Loading Event: ${eventName}`);
     const event = require(`./events/${file}`);
     // Bind the client to any event, before the existing arguments
-    // provided by the discord.js event. 
+    // provided by the discord.js event.
     // This line is awesome by the way. Just sayin'.
     client.on(eventName, event.bind(null, client));
   });
