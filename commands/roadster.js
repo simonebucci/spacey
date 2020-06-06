@@ -7,16 +7,18 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   let mission = link.name
   let description = link.details
   let date = link.launch_date_utc
-  let patch = link.flickr_images
+  let patch = link.flickr_images[0]
   let apo = link.apoapsis_au
   let per = link.periapsis_au
   let inclination = link.inclination
   let longitude = link.longitude
   let speed = link.speed_kph
   let earthd = link.earth_distance_km
+  let wiki = link.wikipedia
 
+/*
   message.channel.send(mission);
-  //message.channel.send({files: [patch]});
+  message.channel.send({files: [patch]});
   message.channel.send('Launch date: '+ date);
   message.channel.send(description);
   message.channel.send('Apoapsis: '+apo);
@@ -25,6 +27,57 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   message.channel.send('Longitude: '+longitude);
   message.channel.send('Speed: '+speed+'kph');
   message.channel.send('Earth distance: '+earthd+'Km');
+*/
+  message.channel.send({embed: {
+      color: 3447003,
+      author: {
+        name: "Tesla Roadster",
+        icon_url: client.user.avatarURL
+      },
+
+      "thumbnail": {
+      "url": patch
+    },
+
+      title: mission,
+      url: wiki,
+      description: description,
+      fields: [{
+          name: "Launch Date",
+          value: date
+        },
+        {
+            name: "Apoapsis",
+            value:  `${apo} `
+          },
+        {
+            name: "Periapsis",
+            value:  `${per} `
+          },
+        {
+            name: "Inclination",
+            value:  `${inclination} `
+          },
+        {
+            name: "Longitude",
+            value:  `${longitude} `
+          },
+        {
+            name: "Speed (Kph)",
+            value:  `${speed} Kph`
+          },
+        {
+            name: "Earth distance",
+            value:  `${earthd} Km`
+          }
+      ],
+      timestamp: new Date(),
+      footer: {
+        //icon_url: client.user.avatarURL,
+        text: "© SpaceX API"
+      }
+    }
+  });
 
 
   };
