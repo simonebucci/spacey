@@ -10,6 +10,9 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   let patch = link.links.mission_patch_small
   let n = link.flight_number
   let press = link.links.presskit
+  let load = link.rocket.second_stage.payloads[0].payload_type
+  let loadid = link.rocket.second_stage.payloads[0].payload_id
+  let rocket = link.rocket.rocket_name
 
 /*  message.channel.send(mission);
   message.channel.send({files: [patch]});
@@ -32,6 +35,18 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       fields: [{
           name: "Launch Date",
           value: date
+        },
+        {
+          name: "Rocket",
+          value: `${rocket} `
+        },
+        {
+          name: "Payload",
+          value: `${loadid} `
+        },
+        {
+          name: "Payload Type",
+          value: `${load} `
         },
         {
           name: "Flight Number",
