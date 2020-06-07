@@ -63,7 +63,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
             value:  `${longitude} `
           },
         {
-            name: "Speed (Kph)",
+            name: "Speed",
             value:  `${speed} Kph`
           },
         {
