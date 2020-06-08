@@ -27,11 +27,11 @@ exports.run = (client, message, args) => {
   client.setScore.run(score);
 
   message.reply(`You currently have ${score.points}$ and are level ${score.level}!`);
-}
+
 setTimeout(() => {
   cooldown.delete(message.author.id)
 }, 3600000)
-
+}
 
 }
 exports.conf = {
