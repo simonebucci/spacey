@@ -3,9 +3,28 @@
 // goes `client, other, args` when this function is run.
 
 module.exports = async (client, message) => {
+  const SQLite = require("better-sqlite3");
+  const sql = new SQLite('./scores.sqlite');
+
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
   if (message.author.bot) return;
+
+  //currency system
+  let score;
+  if (message.guild) {
+    score = client.getScore.get(message.author.id, message.guild.id);
+    if (!score) {
+      score = { id: `${message.guild.id}-${message.author.id}`, user: message.author.id, guild: message.guild.id, points: 0, level: 1 }
+    }
+    //score.points++;
+    const curLevel = Math.floor(0.1 * Math.sqrt(score.points));
+    if(score.level < curLevel) {
+      score.level++;
+      message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
+    }
+    client.setScore.run(score);
+  }
 
   // Grab the settings for this server from Enmap.
   // If there is no guild, get default conf (DMs)
