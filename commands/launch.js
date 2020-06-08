@@ -7,14 +7,17 @@ exports.run = async (client, message, args, level) => {
   const randomValue = Math.floor(Math.random() * value.length);
   var v = value[randomValue];
 
+  let score = client.getScore.get(message.author.id, message.guild.id);
+  if(score.points >= 1000){
+    score.points = score.points - 1000;
+    message.channel.send("You paid 1000$ to launch one rocket");
+
     const msg = await message.channel.send("Launch Countdown");
-    const list = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-    var int = 10;
+    var i;
     const countDown = async () => {
-      for (const item of list) {
+      for (i = 10; i >= 0;i--) {
         await sleep(1000)
-        msg.edit(int);
-        int = int - 1;
+        msg.edit(i);
       }
       await sleep(1000)
       msg.edit("Ignition");
@@ -34,8 +37,10 @@ exports.run = async (client, message, args, level) => {
     }
 
     countDown()
-
-
+  }else{
+    message.channel.send("You don't have enough money to launch a rocket!");
+  }
+    client.setScore.run(score);
 };
 
 exports.conf = {
