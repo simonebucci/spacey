@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
   var v = value[randomValue];
 
   let score = client.getScore.get(message.author.id, message.guild.id);
-  score.points = score.points + v;
+  score.money = score.money + v;
 
   if(v !== 0) {
     message.channel.send(`You gained ${v}$`);
@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
 
   client.setScore.run(score);
 
-  message.reply(`You currently have ${score.points}$ and are level ${score.level}!`);
+  message.reply(`You currently have ${score.money}$ and are level ${score.level}!`);
 
 setTimeout(() => {
   cooldown.delete(message.author.id)

@@ -8,6 +8,9 @@ config.json
 config.js
 data/
 test.js
+setup.js
+config_base.txt
+config.js.example
 
 # Runtime data
 pids
@@ -60,4 +63,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
