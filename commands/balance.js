@@ -3,7 +3,7 @@ const sql = new SQLite('./scores.sqlite');
 
 exports.run = (client, message, args) => {
   let score = client.getScore.get(message.author.id, message.guild.id);
-  message.reply(`You currently have ${score.points} $ and are level ${score.level}!`);
+  message.reply(`You currently have ${score.money} $ and are level ${score.level}!`);
 }
 exports.conf = {
   enabled: true,

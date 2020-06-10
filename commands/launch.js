@@ -8,8 +8,8 @@ exports.run = async (client, message, args, level) => {
   var v = value[randomValue];
 
   let score = client.getScore.get(message.author.id, message.guild.id);
-  if(score.points >= 1000){
-    score.points = score.points - 1000;
+  if(score.money >= 1000){
+    score.money = score.money - 1000;
     message.channel.send("You paid 1000$ to launch one rocket");
 
     const msg = await message.channel.send("Launch Countdown");
@@ -27,7 +27,7 @@ exports.run = async (client, message, args, level) => {
       if(v !== 0) {
         message.channel.send({files: ["https://i.imgur.com/1A9thnP.jpg"]});
         message.channel.send("Successfull Launch!");
-        score.level = score.level + 100;
+        score.scores = score.scores + 100;
         message.reply(`You've earned 100 points!`);
       }
       else{
