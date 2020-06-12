@@ -11,10 +11,12 @@ exports.run = async (client, message, args, level) => {
   var papi = await fetch('http://api.open-notify.org/astros.json').then(response => response.json());
   let pn = papi.number
 
+function astros{
   for(i=0;i<pn;i++){
     let astro = papi.people[i];
-    var astros = astros + `${astro} `
+    return astro
   }
+}
 
   message.channel.send({embed: {
       color: 3447003,
@@ -50,7 +52,7 @@ exports.run = async (client, message, args, level) => {
         },
         {
           name: "People on Board",
-          value: `${astros} `
+          value: astros()
         }
 
       ],
