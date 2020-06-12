@@ -15,7 +15,7 @@
 function astros(){
     for(i=0;i<pn;i++){
       let astro = papi.people[i].name;
-      if(i==pn){
+      if(i==pn-1){
         aastros = aastros + `${astro} `
       }else{
         aastros = aastros + `${astro}, `
