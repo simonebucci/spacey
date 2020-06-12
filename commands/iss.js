@@ -16,11 +16,11 @@ exports.run = async (client, message, args, level) => {
         icon_url: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/InternationalSpaceStationPatch.png'
       },
       thumbnail: {
-      url:
+      url: "https://upload.wikimedia.org/wikipedia/commons/c/cf/InternationalSpaceStationPatch.png"
     },
       title: 'ISS info',
       url: "https://isstracker.spaceflight.esa.int/",
-      description: ,
+      description: "ISS",
       fields: [{
           name: "Latitude",
           value: latitude
@@ -45,8 +45,6 @@ exports.run = async (client, message, args, level) => {
       }
     }
   });
-
-
 
 };
 
