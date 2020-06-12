@@ -11,14 +11,14 @@
   var papi = await fetch('http://api.open-notify.org/astros.json').then(response => response.json());
   let pn = papi.number
 
-var i = 0;
-function astros(i){
-    if(i!=pn){
+
+function astros(){
+    for(i=0;i>pn;i++){
       let astro = papi.people[i].name;
-      return astro, astros(i++)
-    }else{
-      return 
+      var astros = astros + astro
     }
+      return astros
+
 }
 
   message.channel.send({embed: {
