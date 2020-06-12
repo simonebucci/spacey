@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+﻿exports.run = async (client, message, args, level) => {
 
   const fetch = require('node-fetch');
 
@@ -11,12 +11,12 @@ exports.run = async (client, message, args, level) => {
   var papi = await fetch('http://api.open-notify.org/astros.json').then(response => response.json());
   let pn = papi.number
 
-function astros{
+function astros(){
   for(i=0;i<pn;i++){
     let astro = papi.people[i].name;
     return astro
   }
-};
+}
 
   message.channel.send({embed: {
       color: 3447003,
