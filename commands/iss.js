@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
   for(i=0;i<pn;i++){
     let astro = papi.people[i];
     var astros = astros + [` ${astro}`]
-
+    var x = astros.toString();
   }
 
   message.channel.send({embed: {
@@ -51,7 +51,7 @@ exports.run = async (client, message, args, level) => {
         },
         {
           name: "People on Board",
-          value: `${astros} `
+          value: `${x} `
         }
 
       ],
