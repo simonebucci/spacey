@@ -1,4 +1,4 @@
-
+﻿
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
 
   const fetch = require('node-fetch');
@@ -26,11 +26,11 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       title: title,
       url: "http://google.com",
       description: description,
-      fields: [{
+      /*fields: [{
           name: "Author",
           value: right
         }
-      ],
+      ],*/
       timestamp: new Date(),
       footer: {
         icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/717px-NASA_logo.svg.png",
