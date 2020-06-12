@@ -10,12 +10,12 @@
 
   var papi = await fetch('http://api.open-notify.org/astros.json').then(response => response.json());
   let pn = papi.number
-  var aastros = ""
+  var aastros = []
 
 function astros(){
     for(i=0;i<pn;i++){
       let astro = papi.people[i].name;
-      var aastros = aastros + `${astro} `
+      aastros = aastros + `${astro} `
     }
       return aastros
 
@@ -55,7 +55,7 @@ function astros(){
         },
         {
           name: "People on Board",
-          value: astros()
+          value: `${astros()} `
         }
 
       ],
