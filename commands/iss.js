@@ -13,7 +13,7 @@
 
 
 function astros(){
-    for(i=0;i>pn;i++){
+    for(i=0;i<pn;i++){
       let astro = papi.people[i].name;
       var astros = astros + astro
     }
