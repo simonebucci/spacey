@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => {
 
 function astros{
   for(i=0;i<pn;i++){
-    let astro = papi.people[i];
+    let astro = papi.people[i].name;
     return astro
   }
 };
