@@ -63,3 +63,8 @@ typings/
 
 # dotenv environment variables file
 .env
+<<<<<<< HEAD
+
+start.bat
+=======
+>>>>>>> b5efab15572f4c19e103d31553098f3cf2ee28ae
