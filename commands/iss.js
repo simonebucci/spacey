@@ -10,12 +10,12 @@
 
   var papi = await fetch('http://api.open-notify.org/astros.json').then(response => response.json());
   let pn = papi.number
-
+  var astros = ""
 
 function astros(){
     for(i=0;i<pn;i++){
       let astro = papi.people[i].name;
-      var astros = astros + astro
+      var astros = astros + `${astro} `
     }
       return astros
 
