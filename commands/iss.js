@@ -8,6 +8,14 @@ exports.run = async (client, message, args, level) => {
   let altitude = link.altitude
   let velocity = link.velocity
 
+  var papi = await fetch('http://api.open-notify.org/astros.json').then(response => response.json());
+  let pn = papi.number
+
+  for(i=0;i<pn;i++){
+    let astro = papi.people[i];
+    var astros = astros + [` ${astro}`]
+
+  }
 
   message.channel.send({embed: {
       color: 3447003,
@@ -36,7 +44,16 @@ exports.run = async (client, message, args, level) => {
         {
           name: "Velocity",
           value: `${velocity}Km/h `
+        },
+        {
+          name: "Number of People on Board",
+          value: `${pn} `
+        },
+        {
+          name: "People on Board",
+          value: `${astros} `
         }
+
       ],
       timestamp: new Date(),
       footer: {
