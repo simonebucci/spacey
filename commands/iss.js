@@ -50,7 +50,7 @@ exports.run = async (client, message, args, level) => {
         },
         {
           name: "People on Board",
-          value: `${astros} `
+          value: `${astros.length} `
         }
 
       ],
