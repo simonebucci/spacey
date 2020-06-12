@@ -13,8 +13,12 @@
 
 var i = 0;
 function astros(i){
-    let astro = papi.people[i].name;
-    return astro, astros(i--)
+    if(i!=pn){
+      let astro = papi.people[i].name;
+      return astro, astros(i++)
+    }else{
+      return 
+    }
 }
 
   message.channel.send({embed: {
