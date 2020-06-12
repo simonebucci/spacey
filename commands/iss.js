@@ -23,11 +23,11 @@ exports.run = async (client, message, args, level) => {
       description: "ISS",
       fields: [{
           name: "Latitude",
-          value: `latitude`
+          value: `${latitude}`
         },
         {
           name: "Longitude",
-          value: `longitude `
+          value: `${longitude} `
         },
         {
           name: "Altitude",
