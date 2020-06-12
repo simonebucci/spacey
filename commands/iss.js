@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => {
 
   for(i=0;i<pn;i++){
     let astro = papi.people[i];
-    var astros = astros + `${astros} `
+    var astros = astros + `${astro} `
   }
 
   message.channel.send({embed: {
