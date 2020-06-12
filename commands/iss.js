@@ -15,7 +15,8 @@
 function astros(){
     for(i=0;i<pn;i++){
       let astro = papi.people[i].name;
-      if(papi.people.[i].craft == "ISS"){
+      let craft = papi.people.[i].craft
+      if(craft == "ISS"){
         if(i==pn-1){
           aastros = aastros + `${astro} `
         }else{
