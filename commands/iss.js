@@ -16,7 +16,7 @@ function astros{
     let astro = papi.people[i];
     return astro
   }
-}
+};
 
   message.channel.send({embed: {
       color: 3447003,
