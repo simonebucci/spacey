@@ -71,3 +71,6 @@ start.bat
 scores.sqlite-wal
 scores.sqlite-shm
 scores.sqlite-shm
+scores.sqlite-wal
+*.sqlite-shm
+*.sqlite-wal
