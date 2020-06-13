@@ -11,6 +11,7 @@ const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 
 const fetch = require('node-fetch');
+const Canvas = require('canvas');
 
 
 

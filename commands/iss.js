@@ -8,6 +8,8 @@
   let altitude = link.altitude
   let velocity = link.velocity
 
+
+
   var papi = await fetch('http://api.open-notify.org/astros.json').then(response => response.json());
   let pn = papi.number
   var aastros = []
@@ -51,11 +53,11 @@ function astros(){
         },
         {
           name: "Altitude",
-          value: `${altitude}Km `
+          value: `${altitude} Km `
         },
         {
           name: "Velocity",
-          value: `${velocity}Km/h `
+          value: `${velocity} Km/h `
         },
         {
           name: "Number of People on Board",
