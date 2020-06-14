@@ -8,9 +8,9 @@ config.json
 config.js
 data/
 test.js
-scores.sqlite-wal
-scores.sqlite-shm
-scores.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite
 
 # Runtime data
 pids
@@ -68,6 +68,3 @@ typings/
 start.bat
 =======
 >>>>>>> b5efab15572f4c19e103d31553098f3cf2ee28ae
-scores.sqlite-wal
-scores.sqlite-shm
-scores.sqlite-shm
