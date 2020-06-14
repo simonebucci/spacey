@@ -8,9 +8,9 @@ config.json
 config.js
 data/
 test.js
-scores.sqlite-wal
-scores.sqlite-shm
-scores.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite
 
 # Runtime data
 pids
