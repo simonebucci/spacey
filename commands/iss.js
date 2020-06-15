@@ -32,13 +32,13 @@ function astros(){
   message.channel.send({embed: {
       color: 3447003,
       author: {
-        name: "ISS Info",
+        name: "ISS Tracking Info",
         icon_url: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/InternationalSpaceStationPatch.png'
       },
       thumbnail: {
       url: "https://upload.wikimedia.org/wikipedia/commons/c/cf/InternationalSpaceStationPatch.png"
     },
-      title: 'ISS info',
+      title: 'International Space Station',
       url: "https://isstracker.spaceflight.esa.int/",
       description: "ISS",
       fields: [{
@@ -51,11 +51,11 @@ function astros(){
         },
         {
           name: "Altitude",
-          value: `${altitude}Km `
+          value: `${altitude} Km `
         },
         {
           name: "Velocity",
-          value: `${velocity}Km/h `
+          value: `${velocity} Km/h `
         },
         {
           name: "Number of People on Board",

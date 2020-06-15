@@ -1,5 +1,4 @@
 exports.run = async (client, message, args, level) => {
-  const math = require("mathjs")
   const fetch = require('node-fetch');
   var link = await fetch('https://api.wheretheiss.at/v1/satellites/25544').then(response => response.json());
   let latitude = link.latitude
@@ -57,8 +56,8 @@ ctx.lineWidth = 5;
 ctx.strokeStyle = '#790000';
 ctx.stroke();
 
-const avatar = await Canvas.loadImage('https://i.imgur.com/uoTLjd0.png');
-ctx.drawImage(avatar, ((myPoints[0] - mapCenterX) * scale) + (canvas.width /2) - (avatar.width/2) ,((-myPoints[1] - mapCenterY) * scale) + (canvas.height / 2) - (avatar.height/2), 150, 150);
+//const avatar = await Canvas.loadImage('https://i.imgur.com/uoTLjd0.png');
+//ctx.drawImage(avatar, ((myPoints[0] - mapCenterX) * scale) + (canvas.width /2) - (avatar.width/2) ,((-myPoints[1] - mapCenterY) * scale) + (canvas.height / 2) - (avatar.height/2), 150, 150);
 const logo = await Canvas.loadImage('https://i.imgur.com/3Yu8eLD.png');
 ctx.drawImage(logo, 1080, 600, 250, 150);
 ctx.stroke();
