@@ -9,8 +9,10 @@ exports.run = async (client, message, args, level) => {
   const la = latitude
   const lo = longitude
 
+
   const Discord = require("discord.js");
   const Canvas = require('canvas');
+  const fs = require('fs')
 
 
 const canvas = Canvas.createCanvas(1440, 720);
@@ -63,8 +65,28 @@ ctx.drawImage(logo, 1080, 600, 250, 150);
 ctx.stroke();
 
 const attachment = new Discord.Attachment(canvas.toBuffer(), 'track.png');
+const buffer = canvas.toBuffer('image/png')
+fs.writeFileSync('./data/track.png', buffer)
 
-message.channel.send(attachment);
+
+
+
+let embed = new Discord.RichEmbed()
+  .setColor('#0099ff')
+  .setTitle('ISS Live Tracking')
+  .setURL('https://isstracker.spaceflight.esa.int/')
+  //.setAuthor('International Space Station','https://upload.wikimedia.org/wikipedia/commons/c/cf/InternationalSpaceStationPatch.png')
+  //.setDescription('Some description here')
+  .setThumbnail('https://upload.wikimedia.org/wikipedia/commons/c/cf/InternationalSpaceStationPatch.png')
+  .addField('Current position of the ISS', lo+', '+la , true)
+  .attachFile(attachment)
+  .setImage('attachment://track.png')
+  .setTimestamp()
+  .setFooter("© SpaceY", client.user.avatarURL);
+
+   message.channel.send(embed);
+
+
 
 };
 
