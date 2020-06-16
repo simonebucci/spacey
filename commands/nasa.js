@@ -24,7 +24,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       url: image
     },
       title: title,
-      url: "http://google.com",
+      url: "http://nasa.gov",
       description: description,
       /*fields: [{
           name: "Author",
