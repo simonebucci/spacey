@@ -1,4 +1,4 @@
-exports.run = async (client, message, args, level) => {
+﻿exports.run = async (client, message, args, level) => {
 
   const Discord = require("discord.js");
 
@@ -9,7 +9,7 @@ let embed = new Discord.RichEmbed()
   //.setAuthor('International Space Station','https://upload.wikimedia.org/wikipedia/commons/c/cf/InternationalSpaceStationPatch.png')
   //.setDescription('Some description here')
   .setThumbnail('https://i.imgur.com/OY6ehyS.gif')
-  .addField('Donations','Do you want to buy me a coffe? Feel free to donate! (I drink a lot of coffee while coding)',true )
+  .addField('Donations','Do you want to buy me a coffe? Feel free to donate! (I need a lot of coffee while coding)',true )
   .addField('PayPal: ','https://paypal.me/simoneb498', false)
   .setTimestamp()
   .setFooter("© SpaceY", client.user.avatarURL);
