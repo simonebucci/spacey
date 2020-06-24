@@ -12,12 +12,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   let load = link.rocket.second_stage.payloads[0].payload_type
   let loadid = link.rocket.second_stage.payloads[0].payload_id
   let rocket = link.rocket.rocket_name
-/*
-  message.channel.send(mission);
-  message.channel.send({files: [patch]});
-  message.channel.send(description);
-  message.channel.send(date);
-*/
+
 
   message.channel.send({embed: {
       color: 3447003,
