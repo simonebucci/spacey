@@ -11,17 +11,17 @@ exports.run = (client, message, args) => {
   }else{
   cooldown.add(message.author.id);
 
-  var value = [0,100,1000,10000];
+  var value = [10,100,1000,10000];
   const randomValue = Math.floor(Math.random() * value.length);
   var v = value[randomValue];
 
   let score = client.getScore.get(message.author.id, message.guild.id);
   score.money = score.money + v;
 
-  if(v !== 0) {
-    message.channel.send(`You gained ${v}$`);
+  if(v == 10000) {
+    message.channel.send(`Great job! Elon is so proud of you! You gained ${v}$`);
   }else {
-    message.channel.send(`Oh no! You gained ${v}$!`);
+    message.channel.send(`You gained ${v}$!`);
   }
 
   client.setScore.run(score);
