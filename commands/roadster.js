@@ -16,18 +16,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   let earthd = link.earth_distance_km
   let wiki = link.wikipedia
 
-/*
-  message.channel.send(mission);
-  message.channel.send({files: [patch]});
-  message.channel.send('Launch date: '+ date);
-  message.channel.send(description);
-  message.channel.send('Apoapsis: '+apo);
-  message.channel.send('Periapsis: '+per);
-  message.channel.send('Inclination: '+inclination);
-  message.channel.send('Longitude: '+longitude);
-  message.channel.send('Speed: '+speed+'kph');
-  message.channel.send('Earth distance: '+earthd+'Km');
-*/
+
   message.channel.send({embed: {
       color: 3447003,
       author: {
