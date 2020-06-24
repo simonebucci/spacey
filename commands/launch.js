@@ -26,7 +26,7 @@ exports.run = async (client, message, args, level) => {
       await sleep(5000)
       if(v !== 0) {
         message.channel.send({files: ["https://i.imgur.com/1A9thnP.jpg"]});
-        message.channel.send("Successfull Launch!");
+        message.channel.send("Successful Launch!");
         score.scores = score.scores + 100;
         message.reply(`You've earned 100 points!`);
       }
