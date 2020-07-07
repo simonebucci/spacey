@@ -9,7 +9,7 @@ let embed = new Discord.RichEmbed()
   //.setAuthor('International Space Station','https://upload.wikimedia.org/wikipedia/commons/c/cf/InternationalSpaceStationPatch.png')
   //.setDescription('Some description here')
   .setThumbnail('https://i.imgur.com/OY6ehyS.gif')
-  .addField('Donations','Do you want to buy me a coffe? Feel free to donate! (I need a lot of coffee while coding)',true )
+  .addField('Donations','Do you want to buy me a coffee? Feel free to donate! (I need a lot of coffee while coding)',true )
   .addField('PayPal: ','https://paypal.me/simoneb498', false)
   .setTimestamp()
   .setFooter("© SpaceY", client.user.avatarURL);
@@ -31,6 +31,6 @@ exports.conf = {
 exports.help = {
   name: "donate",
   category: "Miscelaneous",
-  description: "Do you want to buy me a coffe? Feel free to donate! (I drink a lot of coffee while coding)",
+  description: "Feel free to donate! (Coffee needed for coding)",
   usage: "donate"
 };
