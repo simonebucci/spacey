@@ -8,7 +8,7 @@ module.exports = async client => {
   client.logger.log(`${client.user.tag}, ready to serve ${client.users.size} users in ${client.guilds.size} servers.`, "ready");
 
   // Make the bot "play the game" which is the help command with default prefix.
-  client.user.setActivity(`${client.settings.get("default").prefix}help`, {type: "PLAYING"});
+  client.user.setActivity(`Elon's Giant Rocket ${client.settings.get("default").prefix}help`, {type: "WATCHING"});
 
   //tabledb
   const table = sql.prepare("SELECT count(*) FROM sqlite_master WHERE type='table' AND name = 'scores';").get();
