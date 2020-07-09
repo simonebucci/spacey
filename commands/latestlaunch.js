@@ -77,7 +77,7 @@ exports.conf = {
 
 exports.help = {
   name: "latestlaunch",
-  category: "Miscelaneous",
+  category: "SpaceX",
   description: "Latest SpaceX launch",
   usage: "latestlaunch"
 };

@@ -51,7 +51,7 @@ exports.conf = {
 
 exports.help = {
   name: "nasa",
-  category: "Miscelaneous",
+  category: "Nasa",
   description: "nasa image of the day",
   usage: "nasa"
 };

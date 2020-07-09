@@ -70,7 +70,7 @@ exports.conf = {
 
 exports.help = {
   name: "nextlaunch",
-  category: "Miscelaneous",
+  category: "SpaceX",
   description: "Next SpaceX launch",
   usage: "nextlaunch"
 };

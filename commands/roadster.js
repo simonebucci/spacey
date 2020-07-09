@@ -80,7 +80,7 @@ exports.conf = {
 
 exports.help = {
   name: "roadster",
-  category: "Miscelaneous",
+  category: "SpaceX",
   description: "Tesla Roadster Info",
   usage: "roadster"
 };

@@ -15,6 +15,6 @@ exports.conf = {
 exports.help = {
   name: "balance",
   category: "Miscelaneous",
-  description: "How rich are you?",
+  description: "Check your wallet and your level",
   usage: "balance"
 };

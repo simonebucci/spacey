@@ -101,7 +101,7 @@ exports.conf = {
 
 exports.help = {
   name: "isstrack",
-  category: "Miscelaneous",
+  category: "Nasa",
   description: "Track the International Space Station",
   usage: "isstrack"
 };

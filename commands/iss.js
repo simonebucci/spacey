@@ -11,6 +11,7 @@
   var papi = await fetch('http://api.open-notify.org/astros.json').then(response => response.json());
   let pn = papi.number
   var aastros = []
+  let poiss = 0
 
 function astros(){
     for(i=0;i<pn;i++){
@@ -18,6 +19,7 @@ function astros(){
       let craft = papi.people[i].craft;
 
       if(craft == "ISS"){
+        poiss++
         if(i==pn-1){
           aastros = aastros + `${astro} `
         }else{
@@ -59,7 +61,7 @@ function astros(){
         },
         {
           name: "Number of People on Board",
-          value: `${pn} `
+          value: `${poiss} `
         },
         {
           name: "People on Board",
@@ -86,7 +88,7 @@ exports.conf = {
 
 exports.help = {
   name: "iss",
-  category: "Miscelaneous",
+  category: "Nasa",
   description: "Info about the International Space Station",
   usage: "iss"
 };

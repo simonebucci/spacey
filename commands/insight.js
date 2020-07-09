@@ -46,7 +46,7 @@ exports.conf = {
 
 exports.help = {
   name: "insight",
-  category: "Miscelaneous",
+  category: "Nasa",
   description: "Get the mars weather from the Insight rover at Elysium Planitia",
   usage: "insight"
 };
