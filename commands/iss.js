@@ -30,6 +30,7 @@ function astros(){
       return aastros
 
 }
+astros();
 
   message.channel.send({embed: {
       color: 3447003,
