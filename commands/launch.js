@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => {
   const sleep = promisify(setTimeout)
 
   let text = args.join(" ");
-  var value = [0,6,9,12];
+  var value = [0,6,9,12,15];
   const randomValue = Math.floor(Math.random() * value.length);
   var v = value[randomValue];
 

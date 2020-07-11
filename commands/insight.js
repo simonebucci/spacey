@@ -1,7 +1,7 @@
 exports.run = async (client, message, args, level) => {
   const fetch = require('node-fetch');
   var link = await fetch('https://api.nasa.gov/insight_weather/?api_key=bRyKFqj5uUOLD20aSUoWgsjxmhcjGeawtvsNce6b&feedtype=json&ver=1.0').then(response => response.json());
-  let lastsol = link.sol_keys[6]
+  let lastsol = link.sol_keys[0]
   let temp = link[lastsol].AT.av
   let press = link[lastsol].PRE.av
   let wind = link[lastsol].HWS.av
