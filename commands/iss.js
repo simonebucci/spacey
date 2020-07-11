@@ -19,7 +19,6 @@ function astros(){
       let craft = papi.people[i].craft;
 
       if(craft == "ISS"){
-        poiss++
         if(i==pn-1){
           aastros = aastros + `${astro} `
         }else{
@@ -30,7 +29,18 @@ function astros(){
       return aastros
 
 }
-astros();
+
+function countastros(){
+for(i=0;i<pn;i++){
+      let astro = papi.people[i].name;
+      let craft = papi.people[i].craft;
+
+      if(craft == "ISS"){
+        poiss++
+      }
+    }
+   return poiss
+}
 
   message.channel.send({embed: {
       color: 3447003,
@@ -62,7 +72,7 @@ astros();
         },
         {
           name: "Number of People on Board",
-          value: `${poiss} `
+          value: `${countastros()} `
         },
         {
           name: "People on Board",
