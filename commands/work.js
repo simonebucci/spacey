@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
   }else{
   cooldown.add(message.author.id);
 
-  var value = [10,100,1000,10000];
+  var value = [100,500,1000,10000];
   const randomValue = Math.floor(Math.random() * value.length);
   var v = value[randomValue];
 

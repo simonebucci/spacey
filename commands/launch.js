@@ -50,7 +50,7 @@ if(error != 1){
       if(v !== 0) {
         message.channel.send({files: [vet[2]]});
         message.channel.send("Successful Launch!");
-        score.scores = score.scores + vet[3];
+        score.points = score.points + vet[3];
         message.reply(`You've earned ${vet[3]} points!`);
       }
       else{
