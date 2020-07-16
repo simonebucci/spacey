@@ -50,7 +50,6 @@ if(error != 1){
       if(v !== 0) {
         message.channel.send({files: [vet[2]]});
         message.channel.send("Successful Launch!");
-        score.points = score.points + vet[3];
         message.reply(`You've earned ${vet[3]} points!`);
       }
       else{
@@ -63,6 +62,9 @@ if(error != 1){
   }else{
     message.channel.send(`You don't have enough money to launch a rocket to ${vet[0]}`);
   }
+    if(v !== 0){
+      score.points = score.points + vet[3];
+    }
     client.setScore.run(score);
 }else{
   error = 0;
