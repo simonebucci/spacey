@@ -13,7 +13,8 @@ exports.run = (client, message, args) => {
 
   const pointsToAdd = parseInt(args[1], 10);
   if(!pointsToAdd) return message.reply("You didn't tell me how many dollars to give...")
-  if (pointsToAdd < 0) return message.reply("You can't give this amount...")
+  if(pointsToAdd < 0) return message.reply("You can't give this amount...")
+  if(user == sender) return message.reply("You can't give yourself money...")
 
   // Get their current points.
   let userscore = client.getScore.get(user.id, message.guild.id);
