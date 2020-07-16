@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
   if (pointsToAdd < 0) return message.reply("You can't give this amount...")
 
   // Get their current points.
-  let userscore = client.getScore.get(message.mentions.users.first(), message.guild.id);
+  let userscore = client.getScore.get(user, message.guild.id);
   let senderscore = client.getScore.get(message.author.id, message.guild.id);
   // It's possible to give points to a user we haven't seen, so we need to initiate defaults here too!
   if (!userscore) {
