@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
 
   if(cooldown.has(message.author.id)){
     //message.delete();
-    message.reply("You have to wait 1 hour to work again!")
+    message.reply("It's too dangerous to sell plans again, wait 1 hour and try again!")
   }else{
   cooldown.add(message.author.id);
 
