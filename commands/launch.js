@@ -84,6 +84,6 @@ exports.conf = {
 exports.help = {
   name: "launch",
   category: "Miscelaneous",
-  description: "launch a rocket! (iss, moon, mars)",
+  description: "launch a rocket! (iss [1000$], moon [10000$], mars [100000$])",
   usage: "launch"
 };
