@@ -11,18 +11,28 @@ exports.run = (client, message, args) => {
   }else{
   cooldown.add(message.author.id);
 
-  var value = [10000,20000,30000];
+  var value = [0,-10000,-25000,10000,20000,30000];
   const randomValue = Math.floor(Math.random() * value.length);
   var v = value[randomValue];
 
   let score = client.getScore.get(message.author.id, message.guild.id);
   score.money = score.money + v;
 
-  if(v == 0) {
-    //message.channel.send(`You got caught!`);
-  }else {
-    message.channel.send(`You received a little bag from a suspicious guy, you gained ${v}$`);
+  switch(v){
+    case 0:
+      message.channel.send(`You got caught but luckily you managed to escape`);
+    break;
+    case -10000:
+      message.channel.send(`You got caught! You paid 10000$ to be released`);
+    break;
+    case -25000:
+      message.channel.send(`You got caught! You paid 25000$ to be released`);
+    break;
+    default:
+      message.channel.send(`You received a little bag from a suspicious guy, you gained ${v}$`);
   }
+
+
 
   client.setScore.run(score);
 
@@ -44,6 +54,6 @@ exports.conf = {
 exports.help = {
   name: "sellplans",
   category: "Miscelaneous",
-  description: "Sell secret projects plans to the Russians",
+  description: "Sell secret projects plans to the Russians, be careful you might get caught!",
   usage: "sellplans"
 };
