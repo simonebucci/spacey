@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 
 exports.run = (client, message, args) => {
 
-const top10 = sql.prepare("SELECT * FROM scores LIMIT 10 ORDER BY points DESC LIMIT 10;").all(message.guild.id);
+const top10 = sql.prepare("SELECT * FROM scores ORDER BY points DESC LIMIT 10;").all(message.guild.id);
 
     // Now shake it and show it! (as a nice embed, too!)
   const embed = new Discord.RichEmbed()
