@@ -3,7 +3,7 @@ const sql = new SQLite('./scores.sqlite');
 let cooldown = new Set();
 
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
 
   if(cooldown.has(message.author.id)){
     //message.delete();
@@ -18,15 +18,22 @@ exports.run = (client, message, args) => {
   let score = client.getScore.get(message.author.id, message.guild.id);
   score.money = score.money + v;
 
+
   switch(v){
     case 0:
-      message.channel.send(`You got caught but luckily you managed to escape`);
+      msg = await message.channel.send(`Something went wrong...`);
+      await sleep(1000)
+      msg.edit(`You got caught but luckily you managed to escape`);
     break;
     case -10000:
-      message.channel.send(`You got caught! You paid 10000$ to be released`);
+      msg = await message.channel.send(`Something went wrong...`);
+      await sleep(1000)
+      msg.edit(`You got caught! You paid 10000$ to be released`);
     break;
     case -25000:
-      message.channel.send(`You got caught! You paid 25000$ to be released`);
+      msg = await message.channel.send(`Something went wrong...`);
+      await sleep(1000)
+      msg.edit(`You got caught! You paid 25000$ to be released`);
     break;
     default:
       message.channel.send(`You received a little bag from a suspicious guy, you gained ${v}$`);
