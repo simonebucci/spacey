@@ -1,6 +1,8 @@
 const SQLite = require("better-sqlite3");
 const sql = new SQLite('./scores.sqlite');
 let cooldown = new Set();
+const { promisify } = require('util')
+const sleep = promisify(setTimeout)
 
 
 exports.run = async (client, message, args) => {
