@@ -24,17 +24,17 @@ exports.run = async (client, message, args) => {
   switch(v){
     case 0:
       msg = await message.channel.send(`Something went wrong...`);
-      await sleep(1000)
+      await sleep(2000)
       msg.edit(`You got caught but luckily you managed to escape`);
     break;
     case -10000:
       msg = await message.channel.send(`Something went wrong...`);
-      await sleep(1000)
+      await sleep(2000)
       msg.edit(`You got caught! You paid 10000$ to be released`);
     break;
     case -25000:
       msg = await message.channel.send(`Something went wrong...`);
-      await sleep(1000)
+      await sleep(2000)
       msg.edit(`You got caught! You paid 25000$ to be released`);
     break;
     default:
