@@ -18,7 +18,12 @@ exports.run = async (client, message, args) => {
   var v = value[randomValue];
 
   let score = client.getScore.get(message.author.id, message.guild.id);
-  score.money = score.money + v;
+  if(score.money<v && v<0)
+  {
+    score.money = 0;
+  }else{
+    score.money = score.money + v;
+  }
 
 
   switch(v){
