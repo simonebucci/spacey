@@ -40,12 +40,12 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: "Bot Owner"
+  permLevel: "User"
 };
 
 exports.help = {
   name: "stock",
   category: "Miscelaneous",
-  description: "Stock info y!stock {symbol}",
+  description: "Stock exchange info y!stock {symbol}",
   usage: "stock"
 };
