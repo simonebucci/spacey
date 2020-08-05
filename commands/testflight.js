@@ -10,6 +10,8 @@ exports.run = async (client, message, args, level) => {
 
   let score = client.getScore.get(message.author.id, message.guild.id);
 
+  var error = 0;
+
 //rocket destinations [name, price, pic, points]
   var vet = ['SN5',35000,'https://i.imgur.com/kmjjHHd.png',10000];
   //var vmoon = ['the Moon',10000,'https://www.nasa.gov/images/content/62043main_Footprint_on_moon.jpg',1000];
