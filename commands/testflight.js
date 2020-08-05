@@ -44,10 +44,6 @@ if(error != 1){
         await sleep(1000)
         msg.edit(i);
       }
-      await sleep(1000)
-      msg.edit("Ignition");
-      await sleep(1000)
-      msg.edit("Lift Off");
       await sleep(5000)
       if(v !== 0) {
         message.channel.send({files: [vet[2]]});
