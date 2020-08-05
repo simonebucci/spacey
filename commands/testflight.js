@@ -40,7 +40,7 @@ if(error != 1){
     const msg = await message.channel.send("Launch Countdown");
     var i;
     const countDown = async () => {
-      for (i = 5; i >= 0;i--) {
+      for (i = 5; i > 0;i--) {
         await sleep(1000)
         msg.edit(i);
       }
