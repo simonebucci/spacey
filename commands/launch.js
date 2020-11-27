@@ -9,6 +9,7 @@ exports.run = async (client, message, args, level) => {
   var v = value[randomValue];
 
   let score = client.getScore.get(message.author.id, message.guild.id);
+  let agency = client.getAgency.get(message.author.id, message.guild.id);
 
 //rocket destinations [name, price, pic, points]
   var viss = ['the ISS',1000,'https://i.imgur.com/1A9thnP.jpg',100];
@@ -64,8 +65,13 @@ if(error != 1){
   }
     if(v !== 0){
       score.points = score.points + vet[3];
+      if(agency.v == 1){
+        agency.points = agency.points + vet[3];
+        agency.rockets++;
+      }
     }
     client.setScore.run(score);
+    client.setAgency.run(agency);
 }else{
   error = 0;
 }

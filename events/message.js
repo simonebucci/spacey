@@ -26,6 +26,24 @@ module.exports = async (client, message) => {
     client.setScore.run(score);
   }
 
+  //agency system
+  let agency;
+  if (message.guild) {
+    agency = client.getAgency.get(message.author.id, message.guild.id);
+    if (!agency) {
+      agency = { id: `${message.guild.id}-${message.author.id}`, user: message.author.id, guild: message.guild.id, points: 0, level: 1, aname:"", v: 0, iss:0, rockets:0 }
+    }
+    //agency.points++;
+    const curALevel = Math.floor(0.1 * Math.sqrt(score.points));
+    if(agency.level < curALevel) {
+      agency.level++;
+      //message.reply(`Your agency leveled up to level **${curALevel}** and you gained 10000$!`);
+      //score.money = score.money + 10000
+    }
+    client.setAgency.run(agency);
+    //client.setScore.run(score);
+  }
+
   // Grab the settings for this server from Enmap.
   // If there is no guild, get default conf (DMs)
   const settings = message.settings = client.getSettings(message.guild);
